@@ -32,8 +32,8 @@ export default defineConfig({
         vue({
             template: {
                 transformAssetUrls: {
-                    base: '/',
-                    includeAbsolute: true,
+                    base: null,
+                    includeAbsolute: false,
                 },
             },
         }),
