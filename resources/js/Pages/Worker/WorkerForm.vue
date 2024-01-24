@@ -12,8 +12,8 @@ const props = defineProps({
 
 const form = useForm({
     id: props.worker ? props.worker.id : '',
-    name: props.worker ? toTitleCase(props.worker.name) : '',
-    lastname: props.worker ? toTitleCase(props.worker.lastname) : '',
+    name: props.worker ? props.worker.name : '',
+    lastname: props.worker ? props.worker.lastname : '',
     document_type: props.worker ? props.worker.document_type : '',
     num_document: props.worker ? props.worker.num_document : '',
     entry_date: props.worker ? props.worker.entry_date : '',
