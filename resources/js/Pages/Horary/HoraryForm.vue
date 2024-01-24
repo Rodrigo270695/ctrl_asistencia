@@ -67,7 +67,7 @@ const datos = [
                         <InputError class="w-full" :message="form.errors.week" />
                     </div>
                     <div class="col-span-2 sm:col-span-1">
-                        <InputLabel value="Horario Ingeso" />
+                        <InputLabel value="Horario Ingreso" />
                         <TextInput type="time" class="w-full" v-model="form.hi" />
                         <InputError class="w-full" :message="form.errors.hi" />
                     </div>
