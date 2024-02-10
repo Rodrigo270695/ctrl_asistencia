@@ -105,16 +105,25 @@ const registros = ref([
                             class="grid grid-cols-1 md:grid-cols-3 gap-4 mx-10 mb-5"
                         >
                             <div>
-                                <InputLabel value="DNI" />
-                                <TextInput
-                                    class="w-full"
-                                    v-model="dniWorker"
-                                    @keyup.enter="getWorker"
-                                />
-                                <InputError
-                                    class="w-full"
-                                    :message="form.errors.id"
-                                />
+<InputLabel value="DNI" />
+                                <div class="relative">
+                                    <TextInput
+                                        class="w-full"
+                                        placeholder="Ingrese su DNI"
+                                        v-model="dniWorker"
+                                        @keyup.enter="getWorker"
+                                    />
+                                    <InputError
+                                        class="w-full"
+                                        :message="form.errors.id"
+                                    />
+                                    <button
+                                        @click.prevent="getWorker"
+                                        class="absolute inset-y-0 right-0 px-3 flex items-center text-white bg-sky-500 rounded-e-md hover:bg-sky-600"
+                                    >
+                                        <v-icon name="fa-search" scale="1.5"/>
+                                    </button>
+                                </div>
                             </div>
                             <div>
                                 <InputLabel value="Nombres" />
